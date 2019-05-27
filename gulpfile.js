@@ -88,10 +88,16 @@ gulp.task('save-images', function() {
         .pipe(gulp.dest('./dist/images'));
 });
 
+//SAVE FONTS folder to dist folder when change
+gulp.task('save-fonts', function() {
+    return gulp.src('./app/fonts/**/*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
+
 //WATCH tasks
 gulp.task('watch', function(){
-    gulp.watch(['app/*.html', 'app/scss/**/*.scss', 'app/js/**/*.js', './app/images/**/*' ], gulp.series(['html', 'sass', 'js', 'save-html', 'save-css', 'save-js', 'save-images'])); //'sass-lint',
+    gulp.watch(['app/*.html', 'app/scss/**/*.scss', 'app/js/**/*.js', './app/images/**/*' ], gulp.series(['html', 'sass', 'js', 'save-html', 'save-css', 'save-js', 'save-images', 'save-fonts'])); //'sass-lint',
 });
 
 //run DEFAULT
-gulp.task('default', gulp.series(['save-html', 'sass', 'save-css' , 'save-js', 'save-images', gulp.parallel('browserSync', 'watch')])); //'sass-lint',
+gulp.task('default', gulp.series(['save-html', 'sass', 'save-css' , 'save-js', 'save-images', 'save-fonts', gulp.parallel('browserSync', 'watch')])); //'sass-lint',

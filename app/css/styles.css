@@ -3,3 +3,48 @@ PROJECT STYLES
 ==============
 Imports all project style components.
 */
+@font-face {
+  font-family: 'title-font-bold';
+  src: url("../fonts/Tangerine/Tangerine-Bold.ttf"); }
+
+@font-face {
+  font-family: 'main-font-reg';
+  src: url("../fonts/Lato/Lato-Regular.ttf"); }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: main-font-reg;
+  color: #37353B; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #37353B; }
+
+.nav {
+  height: 50px;
+  background-color: #d7f5cc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #37353B;
+  padding: 10px 30px;
+  box-sizing: border-box; }
+  .nav--logo-title {
+    font-family: title-font-bold;
+    font-size: 32px;
+    padding-right: 30px; }
+  .nav--list {
+    display: flex;
+    color: white;
+    width: 100%; }
+    .nav--list-link .link-name {
+      line-height: 22px;
+      padding: 0 10px; }
+  .nav--icons {
+    display: flex; }

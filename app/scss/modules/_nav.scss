@@ -1,0 +1,36 @@
+.nav {
+    height: 50px;
+    background-color: $bcg-clr-2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-clr;
+    padding: 10px 30px;
+    box-sizing: border-box;
+
+    &--logo {
+        &-title {
+            font-family: title-font-bold;
+            font-size: 32px;
+            padding-right: 30px;
+        }
+    }
+
+    &--list {
+        display: flex;
+        color:white;
+        width: 100%;
+
+        &-link {
+
+            .link-name {
+                line-height: 22px;
+                padding: 0 10px;
+            }
+        }
+    }
+
+    &--icons {
+        display: flex;
+    }
+}
