@@ -199,3 +199,6 @@ h2 {
     @media all and (max-width: 575px) {
       .about--image {
         display: none; } }
+
+.products--list .product-image {
+  width: 100%; }
