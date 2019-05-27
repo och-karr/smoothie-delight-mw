@@ -50,7 +50,8 @@ a {
       .nav--toggle-menu {
         display: block; } }
     .nav--toggle-menu .fas {
-      font-size: 24px; }
+      font-size: 24px;
+      cursor: pointer; }
   @media all and (max-width: 575px) {
     .nav--logo {
       width: 100%;
@@ -96,6 +97,12 @@ a {
       @media all and (max-width: 575px) {
         .nav--list-link .link-name {
           font-size: 16px; } }
+  .nav .mobile-open {
+    left: 0;
+    transition: all .2s; }
+  .nav .mobile-close {
+    left: -100%;
+    transition: all .2s; }
   .nav--icons {
     display: flex; }
     .nav--icons-icon .icon-link {

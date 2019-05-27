@@ -23,6 +23,7 @@
 
         .fas {
             font-size: 24px;
+            cursor: pointer;
         }
     }
 
@@ -89,6 +90,16 @@
                 }
             }
         }
+    }
+
+    .mobile-open {
+        left: 0;
+        transition: all .2s;
+    }
+
+    .mobile-close {
+        left: -100%;
+        transition: all .2s;
     }
 
     &--icons {
