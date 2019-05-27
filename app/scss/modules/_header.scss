@@ -1,0 +1,29 @@
+.header {
+    background: url(../images/media/header-bcg.jpg);
+    background-size: cover;
+    height: 70vh;
+    position: relative;
+
+    @media #{$max575} {
+        height: 50vh;
+    }
+
+    &--title-container {
+        position: absolute;
+        top: 40%;
+        left: 30px;
+        padding-right: 15px;
+
+        @media #{$max575} {
+            left: 15px;
+        }
+
+        .header-title {
+            padding-bottom: 10px;
+        }
+
+        .header-subtitle {
+            font-size: 18px;
+        }
+    }
+}

@@ -30,6 +30,10 @@ a {
   text-decoration: none;
   color: #37353B; }
 
+h1 {
+  font-family: title-font-bold;
+  font-size: 54px; }
+
 .nav {
   position: sticky;
   height: 70px;
@@ -39,7 +43,8 @@ a {
   align-items: center;
   color: #37353B;
   padding: 10px 30px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 5; }
   @media all and (max-width: 575px) {
     .nav {
       position: relative;
@@ -113,3 +118,24 @@ a {
         @media all and (max-width: 767px) {
           .nav--icons-icon .icon-link .fas {
             font-size: 20px; } }
+
+.header {
+  background: url(../images/media/header-bcg.jpg);
+  background-size: cover;
+  height: 70vh;
+  position: relative; }
+  @media all and (max-width: 575px) {
+    .header {
+      height: 50vh; } }
+  .header--title-container {
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    padding-right: 15px; }
+    @media all and (max-width: 575px) {
+      .header--title-container {
+        left: 15px; } }
+    .header--title-container .header-title {
+      padding-bottom: 10px; }
+    .header--title-container .header-subtitle {
+      font-size: 18px; }
