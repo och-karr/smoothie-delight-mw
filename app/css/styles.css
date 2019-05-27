@@ -11,6 +11,10 @@ Imports all project style components.
   font-family: 'main-font-reg';
   src: url("../fonts/Lato/Lato-Regular.ttf"); }
 
+@font-face {
+  font-family: 'main-font-bold';
+  src: url("../fonts/Lato/Lato-Bold.ttf"); }
+
 * {
   margin: 0;
   padding: 0; }
@@ -27,6 +31,7 @@ a {
   color: #37353B; }
 
 .nav {
+  position: sticky;
   height: 70px;
   background-color: #d7f5cc;
   display: flex;
@@ -35,6 +40,22 @@ a {
   color: #37353B;
   padding: 10px 30px;
   box-sizing: border-box; }
+  @media all and (max-width: 575px) {
+    .nav {
+      position: relative;
+      padding: 10px 15px; } }
+  .nav--toggle-menu {
+    display: none; }
+    @media all and (max-width: 575px) {
+      .nav--toggle-menu {
+        display: block; } }
+    .nav--toggle-menu .fas {
+      font-size: 24px; }
+  @media all and (max-width: 575px) {
+    .nav--logo {
+      width: 100%;
+      display: flex;
+      justify-content: center; } }
   .nav--logo-title {
     font-family: title-font-bold;
     font-size: 32px;
@@ -46,12 +67,35 @@ a {
     border-radius: 50%;
     line-height: 45px;
     padding: 5px; }
+    @media all and (max-width: 575px) {
+      .nav--logo-title {
+        margin-right: 0; } }
   .nav--list {
     display: flex;
-    width: 100%; }
+    width: 100%;
+    justify-content: flex-end; }
+    @media all and (max-width: 575px) {
+      .nav--list {
+        position: absolute;
+        flex-direction: column;
+        left: 0;
+        top: 70px; } }
+    @media all and (max-width: 575px) {
+      .nav--list-link {
+        background-color: #d7f5cc;
+        height: 50px;
+        display: flex;
+        align-items: center; } }
     .nav--list-link .link-name {
       line-height: 22px;
-      padding: 0 10px; }
+      padding: 0 10px;
+      font-family: main-font-bold; }
+      @media all and (max-width: 767px) {
+        .nav--list-link .link-name {
+          font-size: 14px; } }
+      @media all and (max-width: 575px) {
+        .nav--list-link .link-name {
+          font-size: 16px; } }
   .nav--icons {
     display: flex; }
     .nav--icons-icon .icon-link {
@@ -59,3 +103,6 @@ a {
       .nav--icons-icon .icon-link .fas {
         color: #37353B;
         font-size: 24px; }
+        @media all and (max-width: 767px) {
+          .nav--icons-icon .icon-link .fas {
+            font-size: 20px; } }
