@@ -32,12 +32,17 @@ a {
 
 h1 {
   font-family: title-font-bold;
-  font-size: 54px; }
+  font-size: 80px; }
+
+h2 {
+  font-family: title-font-bold;
+  font-size: 52px; }
 
 .nav {
   position: sticky;
+  top: 0;
   height: 70px;
-  background-color: #d7f5cc;
+  background-color: #cdbdda;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,7 +93,7 @@ h1 {
         top: 70px; } }
     @media all and (max-width: 575px) {
       .nav--list-link {
-        background-color: #d7f5cc;
+        background-color: #cdbdda;
         height: 50px;
         display: flex;
         align-items: center; } }
@@ -139,3 +144,58 @@ h1 {
       padding-bottom: 10px; }
     .header--title-container .header-subtitle {
       font-size: 18px; }
+
+.about {
+  display: flex;
+  min-height: 400px; }
+  @media all and (max-width: 1199px) {
+    .about {
+      min-height: auto; } }
+  .about--text {
+    width: 70%;
+    padding: 30px;
+    background-color: #dff7ba; }
+    @media all and (max-width: 1199px) {
+      .about--text {
+        width: 60%; } }
+    @media all and (max-width: 575px) {
+      .about--text {
+        width: 100%; } }
+    .about--text-title {
+      padding-bottom: 15px;
+      color: #3a005c; }
+      @media all and (max-width: 767px) {
+        .about--text-title {
+          font-size: 42px; } }
+    .about--text-content {
+      font-size: 20px; }
+      @media all and (max-width: 767px) {
+        .about--text-content {
+          font-size: 16px; } }
+      .about--text-content .text-list-el {
+        position: relative;
+        display: block;
+        z-index: 2;
+        padding: 15px 0 0 10px; }
+        .about--text-content .text-list-el::before {
+          content: "";
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #fffb00;
+          position: absolute;
+          z-index: -1;
+          left: -10px; }
+  .about--image {
+    width: 30%;
+    height: auto;
+    background: url("../images/media/girl-1.jpg");
+    background-size: cover;
+    background-position: top center; }
+    @media all and (max-width: 1199px) {
+      .about--image {
+        width: 40%; } }
+    @media all and (max-width: 575px) {
+      .about--image {
+        display: none; } }

@@ -1,0 +1,85 @@
+.about {
+    display: flex;
+    min-height: 400px;
+
+    @media #{$max1199} {
+        min-height: auto;
+    }
+
+    &--text {
+        width: 70%;
+        padding: 30px;
+        background-color: $bcg-clr-1;
+
+        @media #{$max1199} {
+            width: 60%;
+        }
+
+        @media #{$max575} {
+            width: 100%;
+        }
+
+        &-title {
+            padding-bottom: 15px;
+            color: $detail-clr-1;
+
+
+            @media #{$max767} {
+                font-size: 42px;
+            }
+            
+        }
+
+        &-content {
+            font-size: 20px;
+
+            @media #{$max767} {
+                font-size: 16px;
+            }
+
+            .text-list {
+
+                &-el {
+                    position: relative;
+                    display: block;
+                    z-index: 2;
+                    padding: 15px 0 0 10px;
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 30px;
+                        height:30px;
+                        border-radius: 50%;
+                        background-color: $detail-clr-2;
+                        position: absolute;
+                        z-index: -1;
+                        left: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &--image {
+        width: 30%;
+        height: auto;
+        background: url('../images/media/girl-1.jpg');
+        background-size: cover;
+        background-position: top center;
+
+        @media #{$max1199} {
+            width: 40%;
+        }
+
+        @media #{$max575} {
+            display: none;
+        }
+
+
+
+        // &-source {
+        //     width: 100%;
+        // }
+    }
+}
