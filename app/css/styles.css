@@ -27,7 +27,7 @@ a {
   color: #37353B; }
 
 .nav {
-  height: 50px;
+  height: 70px;
   background-color: #d7f5cc;
   display: flex;
   justify-content: space-between;
@@ -38,13 +38,24 @@ a {
   .nav--logo-title {
     font-family: title-font-bold;
     font-size: 32px;
-    padding-right: 30px; }
+    margin-right: 30px;
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 45px;
+    padding: 5px; }
   .nav--list {
     display: flex;
-    color: white;
     width: 100%; }
     .nav--list-link .link-name {
       line-height: 22px;
       padding: 0 10px; }
   .nav--icons {
     display: flex; }
+    .nav--icons-icon .icon-link {
+      padding-left: 15px; }
+      .nav--icons-icon .icon-link .fas {
+        color: #37353B;
+        font-size: 24px; }

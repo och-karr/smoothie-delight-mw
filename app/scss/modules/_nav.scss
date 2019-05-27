@@ -1,5 +1,5 @@
 .nav {
-    height: 50px;
+    height: 70px;
     background-color: $bcg-clr-2;
     display: flex;
     justify-content: space-between;
@@ -12,13 +12,20 @@
         &-title {
             font-family: title-font-bold;
             font-size: 32px;
-            padding-right: 30px;
+            margin-right: 30px;
+            background-color: white;
+            width: 45px;
+            height: 45px;
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 45px;
+            padding: 5px;
+
         }
     }
 
     &--list {
         display: flex;
-        color:white;
         width: 100%;
 
         &-link {
@@ -32,5 +39,17 @@
 
     &--icons {
         display: flex;
+
+        &-icon {
+
+            .icon-link {
+                padding-left: 15px;
+
+                .fas {
+                    color: $text-clr;
+                    font-size: 24px;
+                }
+            }
+        }
     }
 }
