@@ -42,7 +42,7 @@ h2 {
   position: sticky;
   top: 0;
   height: 70px;
-  background-color: #cdbdda;
+  background-color: #ffd342;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,7 +93,7 @@ h2 {
         top: 70px; } }
     @media all and (max-width: 575px) {
       .nav--list-link {
-        background-color: #cdbdda;
+        background-color: #ffd342;
         height: 50px;
         display: flex;
         align-items: center; } }
