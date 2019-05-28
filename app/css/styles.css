@@ -206,11 +206,13 @@ h3 {
 
 .products--list-el {
   position: relative; }
+  .products--list-el:hover .product-info {
+    display: inline-block; }
   .products--list-el .product-image {
     width: 100%; }
   .products--list-el .product-info {
     position: absolute;
-    display: inline-block;
+    display: none;
     box-sizing: border-box;
     padding: 30px;
     width: 90%;
@@ -222,7 +224,8 @@ h3 {
     line-height: 22px;
     border-radius: 5px; }
     .products--list-el .product-info-title {
-      padding: 10px 0; }
+      padding: 10px 0;
+      color: #3a005c; }
     .products--list-el .product-info-desc {
       padding: 10px 0; }
     .products--list-el .product-info-list-name {
@@ -243,3 +246,21 @@ h3 {
         position: absolute;
         z-index: -1;
         left: -10px; }
+    .products--list-el .product-info-availability {
+      display: block;
+      padding: 10px 0;
+      font-family: main-font-bold; }
+    .products--list-el .product-info .available {
+      color: #16ca05; }
+    .products--list-el .product-info .unavailable {
+      color: #d30000; }
+    .products--list-el .product-info .product-btn {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer; }
+    .products--list-el .product-info .btn-add {
+      background-color: #16ca05; }
+    .products--list-el .product-info .btn-alert {
+      background-color: #d30000; }

@@ -5,13 +5,19 @@
         &-el {
             position: relative;
 
+            &:hover {
+                .product-info {
+                    display: inline-block;
+                }
+            }
+
             .product-image {
                 width: 100%;
             }
     
             .product-info {
                 position: absolute;
-                display: inline-block;
+                display: none;
                 box-sizing: border-box;
                 padding: 30px;
                 width: 90%;
@@ -25,6 +31,7 @@
     
                 &-title {
                     padding: 10px 0;
+                    color: $title-clr;
                 }
     
                 &-desc {
@@ -56,6 +63,36 @@
                             left: -10px;
                         }
                     }
+                }
+
+                &-availability {
+                    display: block;
+                    padding: 10px 0;
+                    font-family: main-font-bold;
+                }
+
+                .available {
+                    color: $good-clr;
+                }
+
+                .unavailable {
+                    color: $alert-clr;
+                }
+
+                .product-btn {
+                    padding: 10px;
+                    border: none;
+                    border-radius: 5px;
+                    color: $white;
+                    cursor: pointer;
+                }
+
+                .btn-add {
+                    background-color: $good-clr;
+                }
+
+                .btn-alert {
+                    background-color: $alert-clr;
                 }
             }
         }
