@@ -207,12 +207,14 @@ h3 {
 .products--list-el {
   position: relative; }
   .products--list-el:hover .product-info {
-    display: inline-block; }
+    display: flex; }
   .products--list-el .product-image {
     width: 100%; }
   .products--list-el .product-info {
     position: absolute;
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     box-sizing: border-box;
     padding: 30px;
     width: 90%;
@@ -223,44 +225,75 @@ h3 {
     top: 5%;
     line-height: 22px;
     border-radius: 5px; }
+    @media all and (max-width: 991px) {
+      .products--list-el .product-info {
+        line-height: 18px;
+        padding: 15px; } }
     .products--list-el .product-info-title {
       padding: 10px 0;
-      color: #3a005c; }
+      color: #3a005c;
+      width: 100%; }
+      @media all and (max-width: 991px) {
+        .products--list-el .product-info-title {
+          font-size: 20px;
+          padding: 5px 0; } }
     .products--list-el .product-info-desc {
-      padding: 10px 0; }
-    .products--list-el .product-info-list-name {
-      padding-bottom: 10px; }
-    .products--list-el .product-info-list-el {
-      position: relative;
-      display: inline-block;
-      width: 40%;
-      box-sizing: border-box;
-      padding-left: 5px; }
-      .products--list-el .product-info-list-el::before {
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #fffb00;
-        position: absolute;
-        z-index: -1;
-        left: -10px; }
-    .products--list-el .product-info-availability {
-      display: block;
       padding: 10px 0;
-      font-family: main-font-bold; }
-    .products--list-el .product-info .available {
-      color: #16ca05; }
-    .products--list-el .product-info .unavailable {
-      color: #d30000; }
-    .products--list-el .product-info .product-btn {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      color: #fff;
-      cursor: pointer; }
-    .products--list-el .product-info .btn-add {
-      background-color: #16ca05; }
-    .products--list-el .product-info .btn-alert {
-      background-color: #d30000; }
+      width: 100%; }
+    .products--list-el .product-info-list-name {
+      padding-bottom: 10px;
+      width: 100%; }
+      @media all and (max-width: 991px) {
+        .products--list-el .product-info-list-name {
+          padding-bottom: 5px; } }
+    .products--list-el .product-info-list {
+      width: 100%; }
+      @media all and (max-width: 991px) {
+        .products--list-el .product-info-list {
+          padding-bottom: 10px; } }
+      .products--list-el .product-info-list-el {
+        position: relative;
+        display: inline-block;
+        width: 40%;
+        box-sizing: border-box;
+        padding-left: 10px; }
+        .products--list-el .product-info-list-el::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #fffb00;
+          position: absolute;
+          z-index: -1;
+          left: -3px; }
+    .products--list-el .product-info-stock {
+      display: flex;
+      width: 100%;
+      justify-content: space-between; }
+      .products--list-el .product-info-stock .product-availability {
+        display: inline;
+        padding: 10px 0;
+        font-family: main-font-bold; }
+        @media all and (max-width: 991px) {
+          .products--list-el .product-info-stock .product-availability {
+            font-size: 14px; } }
+      .products--list-el .product-info-stock .available {
+        color: #16ca05; }
+      .products--list-el .product-info-stock .unavailable {
+        color: #d30000; }
+      .products--list-el .product-info-stock .product-btn {
+        padding: 7px;
+        margin: auto;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer; }
+        @media all and (max-width: 991px) {
+          .products--list-el .product-info-stock .product-btn {
+            font-size: 14px;
+            padding: 7px; } }
+      .products--list-el .product-info-stock .btn-add {
+        background-color: #16ca05; }
+      .products--list-el .product-info-stock .btn-alert {
+        background-color: #d30000; }
