@@ -329,6 +329,16 @@ h3 {
       .products--list-el .product-info-stock .btn-alert {
         background-color: #d30000; }
 
+.banners-intro {
+  padding: 30px;
+  font-size: 20px;
+  background-color: rgba(255, 254, 204, 0.9); }
+  .banners-intro-title {
+    text-align: center;
+    color: #3a005c; }
+  .banners-intro-content {
+    padding: 30px 30px; }
+
 .banners .banner {
   width: 50%;
   float: left;

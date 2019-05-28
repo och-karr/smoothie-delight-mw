@@ -1,7 +1,18 @@
 .banners {
 
     &-intro {
+        padding: 30px;
+        font-size: 20px;
+        background-color: $bcg-clr-3;
 
+        &-title {
+            text-align: center;
+            color: $title-clr;
+        }
+
+        &-content {
+            padding: 30px 30px;
+        }
     }
 
     .banner {
