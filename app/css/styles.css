@@ -307,7 +307,7 @@ h3 {
           .products--list-el .product-info-stock .product-availability {
             font-size: 12px; } }
       .products--list-el .product-info-stock .available {
-        color: #16ca05; }
+        color: #82d165; }
       .products--list-el .product-info-stock .unavailable {
         color: #d30000; }
       .products--list-el .product-info-stock .product-btn {
@@ -325,6 +325,36 @@ h3 {
           .products--list-el .product-info-stock .product-btn {
             font-size: 12px; } }
       .products--list-el .product-info-stock .btn-add {
-        background-color: #16ca05; }
+        background-color: #82d165; }
       .products--list-el .product-info-stock .btn-alert {
         background-color: #d30000; }
+
+.banners .banner {
+  width: 50%;
+  float: left;
+  position: relative;
+  height: auto; }
+  .banners .banner-img {
+    filter: brightness(0.6);
+    width: 100%;
+    height: auto; }
+  .banners .banner-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 30px;
+    border: 20px solid #82d165; }
+    .banners .banner-content-btn {
+      font-size: 28px;
+      padding: 20px;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      background-color: #82d165; }

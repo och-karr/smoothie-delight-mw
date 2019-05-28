@@ -1,0 +1,52 @@
+.banners {
+
+    &-intro {
+
+    }
+
+    .banner {
+        width: 50%;
+        float: left;
+        position: relative;
+        height: auto;
+
+        &-img {
+            filter: brightness(0.6);
+            width: 100%;
+            height: auto;
+        }
+
+        &-content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: calc(100% - 60px);
+            height:calc(100% - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 30px;;
+            border: 20px solid $good-clr;
+            
+
+            &-btn {
+                font-size: 28px;
+                padding: 20px;
+                border: none;
+                border-radius: 5px;
+                color: $white;
+                cursor: pointer;
+                background-color: $good-clr;
+            }
+        }
+    }
+
+    &-first {
+        
+    }
+
+    &-second {
+        
+    }
+}
