@@ -4,6 +4,14 @@
 
         &-el {
             position: relative;
+            outline: none;
+
+            @media #{$max575} {
+            //    position: static;
+               display: flex;
+               flex-wrap: nowrap;
+
+            }
 
             &:hover {
                 .product-info {
@@ -13,11 +21,22 @@
 
             .product-image {
                 width: 100%;
+
+                @media #{$max575} {
+                    width: 50%;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    outline: none;
+                    margin: 0;
+                    float: left;
+                    min-height: 300px;
+                    object-fit: cover;
+                }
             }
     
             .product-info {
                 position: absolute;
-                display: flex;
+                display: none;
                 flex-wrap: wrap;
                 align-items: center;
                 box-sizing: border-box;
@@ -34,7 +53,16 @@
                 @media #{$max991} {
                     line-height: 18px;
                     padding: 15px;
-                    
+                }
+
+                @media #{$max575} {
+                    display: flex;
+                    line-height: 16px;
+                    font-size: 14px;
+                    width: 50%;
+                    height: 100%;
+                    top: 0;
+                    left: 50%;
                 }
     
                 &-title {
@@ -93,7 +121,7 @@
                 &-stock {
                     display: flex;
                     width: 100%;
-                    justify-content: space-between;
+                    justify-content: space-around;
 
                     .product-availability {
                         display: inline;
@@ -104,6 +132,10 @@
                         @media #{$max991} {
                             font-size: 14px;
                             // padding: 5px 0;
+                        }
+
+                        @media #{$max575} {
+                            font-size: 12px;
                         }
                     }
     
@@ -116,8 +148,8 @@
                     }
     
                     .product-btn {
+                        display: inline;
                         padding: 7px;
-                        margin: auto;
                         border: none;
                         border-radius: 5px;
                         color: $white;
@@ -126,6 +158,10 @@
                         @media #{$max991} {
                             font-size: 14px;
                             padding: 7px;
+                        }
+
+                        @media #{$max575} {
+                            font-size: 12px;
                         }
                     }
     
