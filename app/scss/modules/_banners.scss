@@ -9,6 +9,28 @@
         float: left;
         position: relative;
         height: auto;
+        overflow: hidden;
+
+        &:hover {
+            .banner-img {
+                filter: brightness(0.3);
+                transform: scale(1.2);
+                object-fit: cover;
+                transition: all .3s;
+                
+            }
+
+            .banner-content {
+                border: 20px solid $good-clr;
+                transition: all .3s;
+
+                &-btn {
+
+                    transform: scale(1.2);
+                    transition: all .3s;
+                }
+            }
+        }
 
         &-img {
             filter: brightness(0.6);
@@ -26,8 +48,8 @@
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
-            margin: 30px;;
-            border: 20px solid $good-clr;
+            margin: 30px;
+            border: 0px solid $good-clr;
             
 
             &-btn {

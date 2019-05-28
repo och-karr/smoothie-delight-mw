@@ -333,7 +333,19 @@ h3 {
   width: 50%;
   float: left;
   position: relative;
-  height: auto; }
+  height: auto;
+  overflow: hidden; }
+  .banners .banner:hover .banner-img {
+    filter: brightness(0.3);
+    transform: scale(1.2);
+    object-fit: cover;
+    transition: all .3s; }
+  .banners .banner:hover .banner-content {
+    border: 20px solid #82d165;
+    transition: all .3s; }
+    .banners .banner:hover .banner-content-btn {
+      transform: scale(1.2);
+      transition: all .3s; }
   .banners .banner-img {
     filter: brightness(0.6);
     width: 100%;
@@ -349,7 +361,7 @@ h3 {
     align-items: center;
     box-sizing: border-box;
     margin: 30px;
-    border: 20px solid #82d165; }
+    border: 0px solid #82d165; }
     .banners .banner-content-btn {
       font-size: 28px;
       padding: 20px;
