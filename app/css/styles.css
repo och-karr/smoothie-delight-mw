@@ -38,11 +38,15 @@ h2 {
   font-family: title-font-bold;
   font-size: 52px; }
 
+h3 {
+  font-family: main-font-bold;
+  font-size: 24px; }
+
 .nav {
   position: sticky;
   top: 0;
   height: 70px;
-  background-color: #ffd342;
+  background-color: rgba(252, 228, 148, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,7 +97,7 @@ h2 {
         top: 70px; } }
     @media all and (max-width: 575px) {
       .nav--list-link {
-        background-color: #ffd342;
+        background-color: rgba(252, 228, 148, 0.9);
         height: 50px;
         display: flex;
         align-items: center; } }
@@ -200,5 +204,42 @@ h2 {
       .about--image {
         display: none; } }
 
-.products--list .product-image {
-  width: 100%; }
+.products--list-el {
+  position: relative; }
+  .products--list-el .product-image {
+    width: 100%; }
+  .products--list-el .product-info {
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 30px;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(252, 228, 148, 0.9);
+    z-index: 2;
+    left: 5%;
+    top: 5%;
+    line-height: 22px;
+    border-radius: 5px; }
+    .products--list-el .product-info-title {
+      padding: 10px 0; }
+    .products--list-el .product-info-desc {
+      padding: 10px 0; }
+    .products--list-el .product-info-list-name {
+      padding-bottom: 10px; }
+    .products--list-el .product-info-list-el {
+      position: relative;
+      display: inline-block;
+      width: 40%;
+      box-sizing: border-box;
+      padding-left: 5px; }
+      .products--list-el .product-info-list-el::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fffb00;
+        position: absolute;
+        z-index: -1;
+        left: -10px; }
