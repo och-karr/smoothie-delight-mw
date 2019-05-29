@@ -406,3 +406,24 @@ h3 {
         .banners .banner-content-btn {
           font-size: 20px;
           padding: 10px; } }
+
+.newsletter {
+  display: flex;
+  min-height: 500px;
+  width: 100%; }
+  .newsletter--image {
+    width: 30%;
+    height: auto;
+    background: url("../images/media/girl-1.jpg");
+    background-size: cover;
+    background-position: top center; }
+  .newsletter--content {
+    width: 70%;
+    padding: 30px;
+    background-color: #dff7ba;
+    box-sizing: border-box; }
+    .newsletter--content-title {
+      padding-bottom: 15px;
+      color: #3a005c; }
+    .newsletter--content-text {
+      font-size: 20px; }
