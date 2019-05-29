@@ -6,6 +6,11 @@
 
     function saveToDatabase(mail) {
         console.log("Saved to database");
+
+        let newMailRef = mailsRef.push();
+        newMailRef.set({
+            email: mail
+        });
     }
 
     function validateMail() {
