@@ -414,16 +414,43 @@ h3 {
   .newsletter--image {
     width: 30%;
     height: auto;
-    background: url("../images/media/girl-1.jpg");
+    background: url("../images/media/girl-2.jpg");
     background-size: cover;
     background-position: top center; }
   .newsletter--content {
     width: 70%;
     padding: 30px;
     background-color: #dff7ba;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
     .newsletter--content-title {
-      padding-bottom: 15px;
-      color: #3a005c; }
+      color: #3a005c;
+      text-align: center;
+      width: 100%; }
+      @media all and (max-width: 575px) {
+        .newsletter--content-title {
+          font-size: 40px; } }
     .newsletter--content-text {
-      font-size: 20px; }
+      font-size: 20px;
+      max-width: 800px;
+      margin: auto;
+      width: 100%; }
+      @media all and (max-width: 575px) {
+        .newsletter--content-text {
+          font-size: 16px; } }
+    .newsletter--content-form {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding-bottom: 50px; }
+      .newsletter--content-form-input {
+        background-color: rgba(255, 254, 204, 0.9);
+        border: none;
+        border-radius: 5px;
+        padding: 20px 10px;
+        width: 400px;
+        outline-color: rgba(252, 228, 148, 0.9);
+        font-family: main-font-reg; }
