@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    width: 100%;
+    background-color: $bcg-clr-3;
+    font-size: 14px;
+    flex-wrap: wrap;
+    padding: 30px;
+    box-sizing: border-box;
+
+    &--list {
+        width: 33%;
+        padding-left: 100px;
+        box-sizing: border-box;
+
+        @media #{$max991} {
+            padding-left: 0;
+        }
+    }
+
+    &--info {
+        text-align: center;
+    }
+
+    &--source-info {
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    &--access-info {
+        width: 100%;
+    }
+}

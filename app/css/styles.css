@@ -469,3 +469,26 @@ h3 {
         font-family: main-font-reg;
         color: #3a005c;
         border: 1px solid #3a005c; }
+
+.footer {
+  display: flex;
+  width: 100%;
+  background-color: rgba(255, 254, 204, 0.9);
+  font-size: 14px;
+  flex-wrap: wrap;
+  padding: 30px;
+  box-sizing: border-box; }
+  .footer--list {
+    width: 33%;
+    padding-left: 100px;
+    box-sizing: border-box; }
+    @media all and (max-width: 991px) {
+      .footer--list {
+        padding-left: 0; } }
+  .footer--info {
+    text-align: center; }
+  .footer--source-info {
+    width: 100%;
+    padding-top: 15px; }
+  .footer--access-info {
+    width: 100%; }
