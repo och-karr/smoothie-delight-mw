@@ -1,8 +1,8 @@
 .newsletter {
-    display: flex;
-    min-height: 500px;
     width: 100%;
-
+    min-height: 500px;
+    display: flex;
+    
     &--image {
         width: 30%;
         height: auto;
@@ -13,30 +13,33 @@
 
     &--content {
         width: 70%;
-        padding: 30px;
-        background-color: $bcg-clr-1;
-        box-sizing: border-box;
+        padding: $md-space;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        background-color: $bcg-clr-1;
+        
+        @media #{$max575} {
+            padding: $md-space $sm-space;
+        }
 
         &-title {
-            color: $detail-clr-1;
-            text-align: center;
             width: 100%;
+            text-align: center;
+            color: $title-clr;
 
             @media #{$max575} {
                 font-size: 40px;
             }
         }
 
-        &-text {
-            font-size: 20px;
+        &-text { 
+            width: 100%;
             max-width: 800px;
             margin: auto;
             margin-bottom: 50px;
-            width: 100%;
+            font-size: 20px;
 
             @media #{$max575} {
                 font-size: 16px;
@@ -44,17 +47,17 @@
         }
 
         &-form {
-            display: flex;
             width: 100%;
+            display: flex;
             justify-content: center;
             flex-wrap: wrap;
 
             .input {
+                margin-bottom: 50px;
+                padding: 16px 10px;
                 border: none;
                 border-radius: 5px;
-                padding: 16px 10px;
                 font-family: main-font-reg;
-                margin-bottom: 50px;
                 font-size: 18px;
 
                 @media #{$max575} {
@@ -70,12 +73,11 @@
 
             .form-submit {
                 width: 140px;
-                margin-left: 30px;
-                margin-right: 30px;
-                background-color: $bcg-clr-2;
+                margin-left: $md-space;
+                margin-right: $md-space;
+                background-color: $good-clr;
                 font-family: main-font-reg;
-                color: $title-clr;
-                border: 1px solid $title-clr;
+                color: $text-clr;
             }
         }
     }

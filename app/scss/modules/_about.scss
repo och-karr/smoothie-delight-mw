@@ -1,14 +1,14 @@
 .about {
+    min-height: 500px;
     display: flex;
-    min-height: 400px;
-
+    
     @media #{$max1199} {
         min-height: auto;
     }
 
     &--text {
         width: 70%;
-        padding: 30px;
+        padding: $md-space;
         background-color: $bcg-clr-1;
 
         @media #{$max1199} {
@@ -17,17 +17,16 @@
 
         @media #{$max575} {
             width: 100%;
+            padding: $md-space $sm-space;
         }
 
         &-title {
-            padding-bottom: 15px;
-            color: $detail-clr-1;
-
+            padding-bottom: $sm-space;
+            color: $title-clr;
 
             @media #{$max767} {
                 font-size: 42px;
             }
-            
         }
 
         &-content {
@@ -40,21 +39,13 @@
             .text-list {
 
                 &-el {
+                    padding: $sm-space 0 0 $xs-space;
                     position: relative;
                     display: block;
                     z-index: 2;
-                    padding: 15px 0 0 10px;
 
                     &::before {
-                        content: "";
-                        display: inline-block;
-                        width: 30px;
-                        height:30px;
-                        border-radius: 50%;
-                        background-color: $detail-clr-2;
-                        position: absolute;
-                        z-index: -1;
-                        left: -10px;
+                        @include list-dot(30px, -10px);
                     }
                 }
             }
@@ -75,11 +66,5 @@
         @media #{$max575} {
             display: none;
         }
-
-
-
-        // &-source {
-        //     width: 100%;
-        // }
     }
 }

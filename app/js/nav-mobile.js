@@ -11,4 +11,17 @@ function showMenu() {
     }
 
     toggleMenu.addEventListener("click", openMenu);
+
+    $(window).resize(function () {
+
+        let width = $(window).width();
+
+        if (width > 575) {
+            toggleMenu.classList.add("fa-bars");
+            toggleMenu.classList.remove("fa-times");
+            navList.classList.remove("mobile-open");
+            navList.classList.add("mobile-close");
+        }
+    });
+    
 } showMenu();

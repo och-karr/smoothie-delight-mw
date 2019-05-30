@@ -1,0 +1,11 @@
+@mixin list-dot($diam, $left) {
+    content: "";
+    width: $diam;
+    height: $diam;
+    display: inline-block;
+    position: absolute;
+    left: $left;
+    border-radius: 50%;
+    background-color: $detail-clr;
+    z-index: -1;
+}

@@ -17,7 +17,8 @@ Imports all project style components.
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
   font-family: main-font-reg;
@@ -44,21 +45,19 @@ h3 {
   font-size: 24px; }
 
 .nav {
+  height: 70px;
+  padding: 15px 30px;
   position: sticky;
   top: 0;
-  height: 70px;
-  background-color: rgba(252, 228, 148, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgba(215, 184, 230, 0.9);
   color: #37353B;
-  padding: 10px 30px;
-  box-sizing: border-box;
   z-index: 5; }
   @media all and (max-width: 575px) {
     .nav {
-      position: relative;
-      padding: 10px 15px; } }
+      padding: 15px; } }
   .nav--toggle-menu {
     display: none; }
     @media all and (max-width: 575px) {
@@ -73,38 +72,38 @@ h3 {
       display: flex;
       justify-content: center; } }
   .nav--logo-title {
+    width: 55px;
+    height: 55px;
+    margin-right: 30px;
+    padding: 5px;
+    display: inline-block;
     font-family: title-font-bold;
     font-size: 32px;
-    margin-right: 30px;
-    background-color: white;
-    width: 45px;
-    height: 45px;
-    display: inline-block;
-    border-radius: 50%;
     line-height: 45px;
-    padding: 5px; }
+    background-color: white;
+    border-radius: 50%; }
     @media all and (max-width: 575px) {
       .nav--logo-title {
         margin-right: 0; } }
   .nav--list {
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: flex-end; }
     @media all and (max-width: 575px) {
       .nav--list {
         position: absolute;
-        flex-direction: column;
+        top: 70px;
         left: 0;
-        top: 70px; } }
+        flex-direction: column; } }
     @media all and (max-width: 575px) {
       .nav--list-link {
-        background-color: rgba(252, 228, 148, 0.9);
         height: 50px;
         display: flex;
-        align-items: center; } }
+        align-items: center;
+        background-color: rgba(215, 184, 230, 0.9); } }
     .nav--list-link .link-name {
-      line-height: 22px;
       padding: 0 10px;
+      line-height: 22px;
       font-family: main-font-bold; }
       @media all and (max-width: 767px) {
         .nav--list-link .link-name {
@@ -123,17 +122,17 @@ h3 {
     .nav--icons-icon .icon-link {
       padding-left: 15px; }
       .nav--icons-icon .icon-link .fas {
-        color: #37353B;
-        font-size: 24px; }
+        font-size: 24px;
+        color: #37353B; }
         @media all and (max-width: 767px) {
           .nav--icons-icon .icon-link .fas {
             font-size: 20px; } }
 
 .header {
-  background: url(../images/media/header-bcg.jpg);
-  background-size: cover;
   height: 70vh;
-  position: relative; }
+  position: relative;
+  background: url(../images/media/header-bcg.jpg);
+  background-size: cover; }
   @media all and (max-width: 575px) {
     .header {
       height: 50vh; } }
@@ -147,12 +146,21 @@ h3 {
         left: 15px; } }
     .header--title-container .header-title {
       padding-bottom: 10px; }
+      @media all and (max-width: 991px) {
+        .header--title-container .header-title {
+          font-size: 70px; } }
+      @media all and (max-width: 575px) {
+        .header--title-container .header-title {
+          font-size: 52px; } }
     .header--title-container .header-subtitle {
-      font-size: 18px; }
+      font-size: 24px; }
+      @media all and (max-width: 575px) {
+        .header--title-container .header-subtitle {
+          font-size: 18px; } }
 
 .about {
-  display: flex;
-  min-height: 400px; }
+  min-height: 500px;
+  display: flex; }
   @media all and (max-width: 1199px) {
     .about {
       min-height: auto; } }
@@ -165,7 +173,8 @@ h3 {
         width: 60%; } }
     @media all and (max-width: 575px) {
       .about--text {
-        width: 100%; } }
+        width: 100%;
+        padding: 30px 15px; } }
     .about--text-title {
       padding-bottom: 15px;
       color: #3a005c; }
@@ -178,20 +187,20 @@ h3 {
         .about--text-content {
           font-size: 16px; } }
       .about--text-content .text-list-el {
+        padding: 15px 0 0 10px;
         position: relative;
         display: block;
-        z-index: 2;
-        padding: 15px 0 0 10px; }
+        z-index: 2; }
         .about--text-content .text-list-el::before {
           content: "";
-          display: inline-block;
           width: 30px;
           height: 30px;
+          display: inline-block;
+          position: absolute;
+          left: -10px;
           border-radius: 50%;
           background-color: #fffb00;
-          position: absolute;
-          z-index: -1;
-          left: -10px; }
+          z-index: -1; }
   .about--image {
     width: 30%;
     height: auto;
@@ -219,55 +228,54 @@ h3 {
     @media all and (max-width: 575px) {
       .products--list-el .product-image {
         width: 50%;
-        display: inline-block;
-        box-sizing: border-box;
-        outline: none;
-        margin: 0;
-        float: left;
         min-height: 300px;
+        margin: 0;
+        display: inline-block;
+        outline: none;
+        float: left;
         object-fit: cover; } }
   .products--list-el .product-info {
+    width: 90%;
+    height: 90%;
+    padding: 30px;
     position: absolute;
+    top: 5%;
+    left: 5%;
     display: none;
     flex-wrap: wrap;
     align-items: center;
     box-sizing: border-box;
-    padding: 30px;
-    width: 90%;
-    height: 90%;
-    background-color: rgba(252, 228, 148, 0.9);
-    z-index: 2;
-    left: 5%;
-    top: 5%;
     line-height: 22px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    background-color: rgba(215, 184, 230, 0.9);
+    z-index: 2; }
     @media all and (max-width: 991px) {
       .products--list-el .product-info {
-        line-height: 18px;
-        padding: 15px; } }
+        padding: 15px;
+        line-height: 18px; } }
     @media all and (max-width: 575px) {
       .products--list-el .product-info {
-        display: flex;
-        line-height: 16px;
-        font-size: 14px;
         width: 50%;
         height: 100%;
         top: 0;
-        left: 50%; } }
+        left: 50%;
+        display: flex;
+        line-height: 16px;
+        font-size: 14px; } }
     .products--list-el .product-info-title {
+      width: 100%;
       padding: 10px 0;
-      color: #3a005c;
-      width: 100%; }
+      color: #3a005c; }
       @media all and (max-width: 991px) {
         .products--list-el .product-info-title {
-          font-size: 20px;
-          padding: 5px 0; } }
+          padding: 5px 0;
+          font-size: 20px; } }
     .products--list-el .product-info-desc {
-      padding: 10px 0;
-      width: 100%; }
+      width: 100%;
+      padding: 10px 0; }
     .products--list-el .product-info-list-name {
-      padding-bottom: 10px;
-      width: 100%; }
+      width: 100%;
+      padding-bottom: 10px; }
       @media all and (max-width: 991px) {
         .products--list-el .product-info-list-name {
           padding-bottom: 5px; } }
@@ -277,28 +285,28 @@ h3 {
         .products--list-el .product-info-list {
           padding-bottom: 10px; } }
       .products--list-el .product-info-list-el {
+        width: 40%;
+        padding-left: 10px;
         position: relative;
         display: inline-block;
-        width: 40%;
-        box-sizing: border-box;
-        padding-left: 10px; }
+        box-sizing: border-box; }
         .products--list-el .product-info-list-el::before {
           content: "";
-          display: inline-block;
           width: 20px;
           height: 20px;
+          display: inline-block;
+          position: absolute;
+          left: -3px;
           border-radius: 50%;
           background-color: #fffb00;
-          position: absolute;
-          z-index: -1;
-          left: -3px; }
+          z-index: -1; }
     .products--list-el .product-info-stock {
-      display: flex;
       width: 100%;
+      display: flex;
       justify-content: space-around; }
       .products--list-el .product-info-stock .product-availability {
-        display: inline;
         padding: 10px 0;
+        display: inline;
         font-family: main-font-bold; }
         @media all and (max-width: 991px) {
           .products--list-el .product-info-stock .product-availability {
@@ -309,30 +317,30 @@ h3 {
       .products--list-el .product-info-stock .available {
         color: #82d165; }
       .products--list-el .product-info-stock .unavailable {
-        color: #d30000; }
+        color: #ff4949; }
       .products--list-el .product-info-stock .product-btn {
-        display: inline;
         padding: 7px;
+        display: inline;
         border: none;
         border-radius: 5px;
-        color: #fff;
+        color: #37353B;
         cursor: pointer; }
         @media all and (max-width: 991px) {
           .products--list-el .product-info-stock .product-btn {
-            font-size: 14px;
-            padding: 7px; } }
+            padding: 7px;
+            font-size: 14px; } }
         @media all and (max-width: 575px) {
           .products--list-el .product-info-stock .product-btn {
             font-size: 12px; } }
       .products--list-el .product-info-stock .btn-add {
         background-color: #82d165; }
       .products--list-el .product-info-stock .btn-alert {
-        background-color: #d30000; }
+        background-color: #ff4949; }
 
 .banners-intro {
   padding: 30px;
   font-size: 20px;
-  background-color: rgba(255, 254, 204, 0.9); }
+  background-color: #fffecc; }
   @media all and (max-width: 575px) {
     .banners-intro {
       padding: 30px 15px; } }
@@ -343,9 +351,9 @@ h3 {
       .banners-intro-title {
         font-size: 40px; } }
   .banners-intro-content {
-    padding: 30px 0;
     max-width: 1200px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 30px 0; }
     @media all and (max-width: 767px) {
       .banners-intro-content {
         font-size: 16px; } }
@@ -355,9 +363,9 @@ h3 {
 
 .banners .banner {
   width: 50%;
-  float: left;
-  position: relative;
   height: auto;
+  position: relative;
+  float: left;
   overflow: hidden; }
   @media all and (max-width: 767px) {
     .banners .banner {
@@ -368,49 +376,49 @@ h3 {
     object-fit: cover;
     transition: all .3s; }
   .banners .banner:hover .banner-content {
-    border: 20px solid rgba(252, 228, 148, 0.9);
+    border: 20px solid rgba(215, 184, 230, 0.9);
     transition: all .3s; }
     @media all and (max-width: 991px) {
       .banners .banner:hover .banner-content {
-        border: 10px solid rgba(252, 228, 148, 0.9); } }
+        border: 10px solid rgba(215, 184, 230, 0.9); } }
     .banners .banner:hover .banner-content-btn {
       transform: scale(1.2);
       transition: all .3s; }
   .banners .banner-img {
-    filter: brightness(0.6);
     width: 100%;
     height: auto;
-    transform: scale(1.05); }
+    transform: scale(1.05);
+    filter: brightness(0.6); }
   .banners .banner-content {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: calc(100% - 60px);
     height: calc(100% - 60px);
+    margin: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    margin: 30px;
     border: 0px solid #82d165;
     border-radius: 5px; }
     .banners .banner-content-btn {
+      padding: 16px 20px;
       font-size: 28px;
-      padding: 20px;
       border: none;
       border-radius: 5px;
-      color: #fff;
-      cursor: pointer;
-      background-color: #82d165; }
+      color: #37353B;
+      background-color: #82d165;
+      cursor: pointer; }
       @media all and (max-width: 991px) {
         .banners .banner-content-btn {
-          font-size: 20px;
-          padding: 10px; } }
+          padding: 10px;
+          font-size: 20px; } }
 
 .newsletter {
-  display: flex;
+  width: 100%;
   min-height: 500px;
-  width: 100%; }
+  display: flex; }
   .newsletter--image {
     width: 30%;
     height: auto;
@@ -420,68 +428,70 @@ h3 {
   .newsletter--content {
     width: 70%;
     padding: 30px;
-    background-color: #dff7ba;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    background-color: #dff7ba; }
+    @media all and (max-width: 575px) {
+      .newsletter--content {
+        padding: 30px 15px; } }
     .newsletter--content-title {
-      color: #3a005c;
+      width: 100%;
       text-align: center;
-      width: 100%; }
+      color: #3a005c; }
       @media all and (max-width: 575px) {
         .newsletter--content-title {
           font-size: 40px; } }
     .newsletter--content-text {
-      font-size: 20px;
+      width: 100%;
       max-width: 800px;
       margin: auto;
       margin-bottom: 50px;
-      width: 100%; }
+      font-size: 20px; }
       @media all and (max-width: 575px) {
         .newsletter--content-text {
           font-size: 16px; } }
     .newsletter--content-form {
-      display: flex;
       width: 100%;
+      display: flex;
       justify-content: center;
       flex-wrap: wrap; }
       .newsletter--content-form .input {
+        margin-bottom: 50px;
+        padding: 16px 10px;
         border: none;
         border-radius: 5px;
-        padding: 16px 10px;
         font-family: main-font-reg;
-        margin-bottom: 50px;
         font-size: 18px; }
         @media all and (max-width: 575px) {
           .newsletter--content-form .input {
             font-size: 16px; } }
       .newsletter--content-form .form-email {
         width: 400px;
-        background-color: rgba(255, 254, 204, 0.9);
-        outline-color: rgba(252, 228, 148, 0.9); }
+        background-color: #fffecc;
+        outline-color: rgba(215, 184, 230, 0.9); }
       .newsletter--content-form .form-submit {
         width: 140px;
         margin-left: 30px;
         margin-right: 30px;
-        background-color: rgba(252, 228, 148, 0.9);
+        background-color: #82d165;
         font-family: main-font-reg;
-        color: #3a005c;
-        border: 1px solid #3a005c; }
+        color: #37353B; }
 
 .footer {
-  display: flex;
   width: 100%;
-  background-color: rgba(255, 254, 204, 0.9);
-  font-size: 14px;
-  flex-wrap: wrap;
   padding: 30px;
-  box-sizing: border-box; }
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  background-color: rgba(215, 184, 230, 0.9); }
+  @media all and (max-width: 575px) {
+    .footer {
+      padding: 30px 15px; } }
   .footer--list {
     width: 33%;
-    padding-left: 100px;
-    box-sizing: border-box; }
+    padding-left: 100px; }
     @media all and (max-width: 991px) {
       .footer--list {
         padding-left: 0; } }

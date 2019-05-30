@@ -1,8 +1,8 @@
 .header {
-    background: url(../images/media/header-bcg.jpg);
-    background-size: cover;
     height: 70vh;
     position: relative;
+    background: url(../images/media/header-bcg.jpg);
+    background-size: cover;
 
     @media #{$max575} {
         height: 50vh;
@@ -11,19 +11,31 @@
     &--title-container {
         position: absolute;
         top: 40%;
-        left: 30px;
-        padding-right: 15px;
+        left: $md-space;
+        padding-right: $sm-space;
 
         @media #{$max575} {
-            left: 15px;
+            left: $sm-space;
         }
 
         .header-title {
-            padding-bottom: 10px;
+            padding-bottom: $xs-space;
+
+            @media #{$max991} {
+                font-size: 70px;
+            }
+
+            @media #{$max575} {
+                font-size: 52px;
+            }
         }
 
         .header-subtitle {
-            font-size: 18px;
+            font-size: 24px;
+
+            @media #{$max575} {
+                font-size: 18px;
+            }
         }
     }
 }

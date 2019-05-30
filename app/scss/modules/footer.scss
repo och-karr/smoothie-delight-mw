@@ -1,16 +1,18 @@
 .footer {
-    display: flex;
     width: 100%;
-    background-color: $bcg-clr-3;
-    font-size: 14px;
+    padding: $md-space;
+    display: flex;
     flex-wrap: wrap;
-    padding: 30px;
-    box-sizing: border-box;
+    font-size: 14px;
+    background-color: $bcg-clr-2;
+    
+    @media #{$max575} {
+        padding: $md-space $sm-space;
+    }
 
     &--list {
         width: 33%;
         padding-left: 100px;
-        box-sizing: border-box;
 
         @media #{$max991} {
             padding-left: 0;
@@ -23,7 +25,7 @@
 
     &--source-info {
         width: 100%;
-        padding-top: 15px;
+        padding-top: $sm-space;
     }
 
     &--access-info {

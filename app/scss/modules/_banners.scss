@@ -1,12 +1,12 @@
 .banners {
 
     &-intro {
-        padding: 30px;
+        padding: $md-space;
         font-size: 20px;
         background-color: $bcg-clr-3;
 
         @media #{$max575} {
-            padding: 30px 15px;
+            padding: $md-space $sm-space;
         }
 
         &-title {
@@ -19,25 +19,25 @@
         }
 
         &-content {
-            padding: 30px 0;
             max-width: 1200px;
             margin: 0 auto;
+            padding: $md-space 0;
 
             @media #{$max767} {
                 font-size: 16px;
             }
 
             @media #{$max575} {
-                padding: 30px 0;
+                padding: $md-space 0;
             }
         }
     }
 
     .banner {
         width: 50%;
-        float: left;
-        position: relative;
         height: auto;
+        position: relative;
+        float: left;
         overflow: hidden;
 
         @media #{$max767} {
@@ -50,7 +50,6 @@
                 transform: scale(1.2);
                 object-fit: cover;
                 transition: all .3s;
-                
             }
 
             .banner-content {
@@ -62,7 +61,6 @@
                 }
 
                 &-btn {
-
                     transform: scale(1.2);
                     transition: all .3s;
                 }
@@ -70,49 +68,40 @@
         }
 
         &-img {
-            filter: brightness(0.6);
             width: 100%;
             height: auto;
             transform: scale(1.05);
+            filter: brightness(0.6);
         }
 
         &-content {
-            position: absolute;
-            left: 0;
-            top: 0;
             width: calc(100% - 60px);
             height:calc(100% - 60px);
+            margin: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             box-sizing: border-box;
-            margin: 30px;
             border: 0px solid $good-clr;
             border-radius: 5px;
-            
 
             &-btn {
+                padding: 16px 20px;
                 font-size: 28px;
-                padding: 20px;
                 border: none;
                 border-radius: 5px;
-                color: $white;
-                cursor: pointer;
+                color: $text-clr;
                 background-color: $good-clr;
+                cursor: pointer;
 
                 @media #{$max991} {
-                    font-size: 20px;
                     padding: 10px;
+                    font-size: 20px;
                 }
             }
         }
-    }
-
-    &-first {
-        
-    }
-
-    &-second {
-        
     }
 }

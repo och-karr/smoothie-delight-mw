@@ -1,4 +1,4 @@
-    function getNewsletter() {
+function getNewsletter() {
 
     const form = document.querySelector('.newsletter--content-form');
 

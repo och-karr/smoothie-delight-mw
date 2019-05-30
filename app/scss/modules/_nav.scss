@@ -1,19 +1,17 @@
 .nav {
+    height: 70px;
+    padding: $sm-space $md-space;
     position: sticky;
     top: 0;
-    height: 70px;
-    background-color: $bcg-clr-2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $bcg-clr-2;
     color: $text-clr;
-    padding: 10px 30px;
-    box-sizing: border-box;
     z-index: 5;
 
     @media #{$max575} {
-        position: relative;
-        padding: 10px 15px;
+        padding: $sm-space;
     }
 
     &--toggle-menu {
@@ -34,22 +32,20 @@
         @media #{$max575} {
             width: 100%;
             display: flex;
-            // justify-content: flex-start;
-            // margin-left: 15px;
             justify-content: center;
         }
 
         &-title {
+            width: 55px;
+            height: 55px;
+            margin-right: $md-space;
+            padding: 5px;
+            display: inline-block;
             font-family: title-font-bold;
             font-size: 32px;
-            margin-right: 30px;
-            background-color: white;
-            width: 45px;
-            height: 45px;
-            display: inline-block;
-            border-radius: 50%;
             line-height: 45px;
-            padding: 5px;
+            background-color: white;
+            border-radius: 50%;
 
             @media #{$max575} {
                 margin-right: 0;
@@ -58,29 +54,29 @@
     }
 
     &--list {
-        display: flex;
         width: 100%;
+        display: flex;
         justify-content: flex-end;
 
         @media #{$max575} {
             position: absolute;
-            flex-direction: column;
-            left: 0;
             top: 70px;
+            left: 0;
+            flex-direction: column;
         }
 
         &-link {
 
             @media #{$max575} {
-                background-color: $bcg-clr-2;
                 height: 50px;
                 display: flex;
                 align-items: center;
+                background-color: $bcg-clr-2; 
             }
 
             .link-name {
+                padding: 0 $xs-space;
                 line-height: 22px;
-                padding: 0 10px;
                 font-family: main-font-bold;
 
                 @media #{$max767} {
@@ -110,12 +106,12 @@
         &-icon {
 
             .icon-link {
-                padding-left: 15px;
+                padding-left: $sm-space;
 
                 .fas {
-                    color: $text-clr;
                     font-size: 24px;
-
+                    color: $text-clr;
+                    
                     @media #{$max767} {
                         font-size: 20px;
                     }

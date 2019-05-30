@@ -7,10 +7,8 @@
             outline: none;
 
             @media #{$max575} {
-            //    position: static;
                display: flex;
                flex-wrap: nowrap;
-
             }
 
             &:hover {
@@ -24,66 +22,65 @@
 
                 @media #{$max575} {
                     width: 50%;
-                    display: inline-block;
-                    box-sizing: border-box;
-                    outline: none;
-                    margin: 0;
-                    float: left;
                     min-height: 300px;
+                    margin: 0;
+                    display: inline-block;
+                    outline: none;
+                    float: left;
                     object-fit: cover;
                 }
             }
     
             .product-info {
+                width: 90%;
+                height: 90%;
+                padding: $md-space;
                 position: absolute;
+                top: 5%;
+                left: 5%;
                 display: none;
                 flex-wrap: wrap;
                 align-items: center;
                 box-sizing: border-box;
-                padding: 30px;
-                width: 90%;
-                height: 90%;
-                background-color: $bcg-clr-2;
-                z-index: 2;
-                left: 5%;
-                top: 5%;
                 line-height: 22px;
                 border-radius: 5px;
+                background-color: $bcg-clr-2;
+                z-index: 2;
 
                 @media #{$max991} {
+                    padding: $sm-space;
                     line-height: 18px;
-                    padding: 15px;
                 }
 
                 @media #{$max575} {
-                    display: flex;
-                    line-height: 16px;
-                    font-size: 14px;
                     width: 50%;
                     height: 100%;
                     top: 0;
                     left: 50%;
+                    display: flex;
+                    line-height: 16px;
+                    font-size: 14px;
                 }
     
                 &-title {
-                    padding: 10px 0;
-                    color: $title-clr;
                     width: 100%;
+                    padding: $xs-space 0;
+                    color: $title-clr;
 
                     @media #{$max991} {
-                        font-size: 20px;
                         padding: 5px 0;
+                        font-size: 20px;
                     }
                 }
     
                 &-desc {
-                    padding: 10px 0;
                     width: 100%;
+                    padding: $xs-space 0;
                 }
     
                 &-list-name {
-                    padding-bottom: 10px;
                     width: 100%;
+                    padding-bottom: $xs-space;
 
                     @media #{$max991} {
                         padding-bottom: 5px;
@@ -94,44 +91,34 @@
                     width: 100%;
 
                     @media #{$max991} {
-                        padding-bottom: 10px;
+                        padding-bottom: $xs-space;
                     }
     
                     &-el {
+                        width: 40%;
+                        padding-left: $xs-space;
                         position: relative;
                         display: inline-block;
-                        width: 40%;
                         box-sizing: border-box;
-                        padding-left: 10px;
-
+                        
                         &::before {
-                            content: "";
-                            display: inline-block;
-                            width: 20px;
-                            height: 20px;
-                            border-radius: 50%;
-                            background-color: $detail-clr-2;
-                            position: absolute;
-                            z-index: -1;
-                            left: -3px;
+                            @include list-dot(20px, -3px);
                         }
                     }
                 }
 
                 &-stock {
-                    display: flex;
                     width: 100%;
+                    display: flex;
                     justify-content: space-around;
 
                     .product-availability {
+                        padding: $xs-space 0;
                         display: inline;
-                        padding: 10px 0;
                         font-family: main-font-bold;
-                        // width: 60%;
     
                         @media #{$max991} {
                             font-size: 14px;
-                            // padding: 5px 0;
                         }
 
                         @media #{$max575} {
@@ -148,16 +135,16 @@
                     }
     
                     .product-btn {
-                        display: inline;
                         padding: 7px;
+                        display: inline;
                         border: none;
                         border-radius: 5px;
-                        color: $white;
+                        color: $text-clr;
                         cursor: pointer;
-                        // width: 30%;
+
                         @media #{$max991} {
-                            font-size: 14px;
                             padding: 7px;
+                            font-size: 14px;
                         }
 
                         @media #{$max575} {
